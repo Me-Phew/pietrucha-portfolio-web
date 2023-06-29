@@ -1,0 +1,51 @@
+@import 'colors';
+@import 'constants';
+@import 'vars';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+  transition: transform $transition-duration, background-color $transition-duration,
+    box-shadow $transition-duration;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: $text-color;
+  background: $background-color;
+  min-height: 100vh;
+  line-height: 1.6;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+#app {
+  font-weight: normal;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: $secondary-color;
+}
+
+ul {
+  list-style-type: none;
+}
+
+input {
+  outline: none;
+}
+
+.hidden-input {
+  display: none;
+}

@@ -1,0 +1,19 @@
+:root {
+  /* RGB triplets */
+  --background-color-rgb: 8, 8, 8;
+  --text-color-rgb: 245, 245, 247;
+
+  --primary-color-rgb: 105, 242, 74;
+  --secondary-color-rgb: 237, 242, 241;
+
+  --accent-color-rgb: 74, 105, 242;
+
+  /* Colors from RGB triplets */
+  --background-color: rgb(var(--background-color-rgb));
+  --text-color: rgb(var(--text-color-rgb));
+
+  --primary-color: rgb(var(--primary-color-rgb));
+  --secondary-color: rgb(var(--secondary-color-rgb));
+
+  --accent-color: rgb(var(--accent-color-rgb));
+}
