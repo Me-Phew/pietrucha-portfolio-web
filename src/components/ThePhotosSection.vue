@@ -162,25 +162,35 @@ onMounted(() => {
         transform: translate(200%, 35%) rotate(4deg);
       }
 
-      // .sunrise {
-      //   transform: translate(80%, 30%) rotate(4deg);
-      // }
+      @media only screen and (min-width: 1815px) {
+        .bold {
+          transform: translate(28vw) rotate(4deg);
+        }
 
-      // .trolley {
-      //   transform: translate(-100%, -20%) rotate(-4deg);
-      // }
+        .thin {
+          transform: translate(-28vw) rotate(-4deg);
+        }
 
-      // .flower {
-      //   transform: translate(130%, -150%) rotate(4deg);
-      // }
+        .sunrise {
+          transform: translate(-30vw, 10vh) rotate(-4deg);
+        }
 
-      // .misty-sun-rays {
-      //   transform: translate(-100%, -110%) rotate(-4deg);
-      // }
+        .trolley {
+          transform: translate(25vw, -5vh) rotate(4deg);
+        }
 
-      // .dog-with-bone {
-      //   transform: translate(-200%, 50%) rotate(-4deg);
-      // }
+        .flower {
+          transform: translate(-25vw, -40vh) rotate(-4deg);
+        }
+
+        .misty-sun-rays {
+          transform: translate(25vw, -40vh) rotate(4deg);
+        }
+
+        .dog-with-bone {
+          transform: translate(25vw, 15vh) rotate(4deg);
+        }
+      }
 
       .blob-button {
         opacity: 1;
@@ -195,7 +205,7 @@ onMounted(() => {
     position: relative;
     display: flex;
     opacity: 0;
-    transition: all 800ms;
+    transition: opacity 800ms cubic-bezier(0.05, 0.43, 0.25, 0.95);
 
     &:focus {
       outline: none;
@@ -213,7 +223,6 @@ onMounted(() => {
 
     .blob {
       outline: none;
-      transition: transform 0.3s linear;
       cursor: pointer;
     }
 
@@ -235,7 +244,6 @@ onMounted(() => {
   background-color: rgba(255, 255, 255, 0.2);
   width: 100%;
   position: absolute;
-  transition: z-index 1s;
   transition: transform 800ms cubic-bezier(0.05, 0.43, 0.25, 0.95);
   bottom: 15%;
   background-repeat: no-repeat;
