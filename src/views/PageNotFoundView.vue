@@ -12,9 +12,9 @@ onMounted(() => {
   gsap.fromTo(
     moonPhoto.value,
     { x: '-100%', scale: 1 },
-    { x: '0%', scale: 4, duration: 0.8, ease: 'none' },
+    { x: '0%', scale: 3, duration: 0.8, ease: 'none' },
   );
-  gsap.fromTo(infoWrapper.value, { x: '100%' }, { x: '0%', duration: 0.8, ease: 'none' });
+  gsap.fromTo(infoWrapper.value, { x: '100%' }, { x: '0%', duration: 0.2, ease: 'none' });
 });
 </script>
 
