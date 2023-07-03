@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import BaseInput from '@/components/BaseInput.vue';
 import type { BaseInputProps } from '@/components/BaseInput.vue';
+import BaseInput from '@/components/BaseInput.vue';
 
 defineProps<BaseInputProps>();
 </script>
@@ -17,7 +17,7 @@ defineProps<BaseInputProps>();
 
 <style scoped lang="scss">
 .minimalistic-input {
-  background-color: none;
+  background-color: transparent;
   border-radius: 0;
   border-width: 0 0 1px 0;
   border-style: solid;
