@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { PhPaperclip, PhPaperclipHorizontal, PhX } from '@phosphor-icons/vue';
 import { getFileSize } from '@/utils';
+import { PhPaperclip, PhPaperclipHorizontal, PhX } from '@phosphor-icons/vue';
 import { ref } from 'vue';
 
 const attachments = ref<Array<File>>([]);
@@ -67,7 +67,7 @@ const deleteFile = (index: number) => {
         :size="32"
         color="var(--text-color)"
       />
-      <span>Add attachment</span>
+      <span>Dodaj załącznik</span>
     </div>
     <input
       type="file"
