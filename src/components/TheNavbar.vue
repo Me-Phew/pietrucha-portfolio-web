@@ -21,7 +21,7 @@ onMounted(() => {
         :size="60"
         color="var(--text-color)"
       />
-      <p>Jakub "Pietrucha" Tokarczyk</p>
+      <p class="text">Jakub "Pietrucha" Tokarczyk</p>
     </div>
 
     <TheNavbarScrollLinks />
@@ -35,13 +35,19 @@ onMounted(() => {
   padding: 1rem 10vw;
   display: flex;
   justify-content: space-between;
-  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-size: 1rem;
   transform: translateY(-100%);
 
   .logo {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
+
+    .text {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
   }
 }
 </style>

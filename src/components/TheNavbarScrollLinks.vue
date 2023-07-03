@@ -8,16 +8,16 @@ const homePageSectionsStore = useHomePageSectionsStore();
 <template>
   <ul class="scroll-links">
     <li class="scroll-link-item">
-      <ScrollLink :scrollTarget="homePageSectionsStore.photos">Photos</ScrollLink>
+      <ScrollLink :scrollTarget="homePageSectionsStore.photos">Zdjęcia</ScrollLink>
     </li>
     <li class="scroll-link-item">
-      <ScrollLink :scrollTarget="homePageSectionsStore.photoShoots">Photo shoots</ScrollLink>
+      <ScrollLink :scrollTarget="homePageSectionsStore.photoShoots">Sesje zdjęciowe</ScrollLink>
     </li>
     <li class="scroll-link-item">
       <ScrollLink
         :scrollTarget="homePageSectionsStore.footer"
         class="cta-link"
-        >Contact</ScrollLink
+        >Kontakt</ScrollLink
       >
     </li>
   </ul>
@@ -31,10 +31,8 @@ const homePageSectionsStore = useHomePageSectionsStore();
   align-items: center;
 
   .cta-link {
-    background-color: $primary-color;
+    background-color: $text-color;
     color: $background-color;
-    border-radius: 0.5rem;
-    font-weight: 600;
   }
 }
 </style>
