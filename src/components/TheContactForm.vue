@@ -13,7 +13,7 @@ import MinimalisticInput from '@/components/MinimalisticInput.vue';
     <MinimalisticInput
       idAndName="name"
       autocomplete="given-name"
-      placeholder="Name"
+      placeholder="Imię"
     />
     <MinimalisticInput
       idAndName="email"
@@ -21,14 +21,14 @@ import MinimalisticInput from '@/components/MinimalisticInput.vue';
       placeholder="Email"
     />
 
-    <BaseTextarea placeholder="Tell me whatever you need" />
+    <BaseTextarea placeholder="Twoja wiadomość" />
 
     <BaseFileUpload />
 
     <BaseButton
       type="submit"
       class="submit-button"
-      >Send message</BaseButton
+      >Wyślij wiadomość</BaseButton
     >
   </form>
 </template>
@@ -41,56 +41,10 @@ import MinimalisticInput from '@/components/MinimalisticInput.vue';
   flex-direction: column;
   gap: 2rem;
   width: 50%;
-}
+  max-width: 30vw;
 
-.input-font-medium {
-  font-size: 1.2rem;
-}
-
-.textarea-wrapper {
-  position: relative;
-
-  .word-count {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    color: rgba(var(--text-color-rgb), 0.5);
-    transition: color $transition-duration;
+  .submit-button {
+    align-self: center;
   }
-}
-
-.textarea-input,
-.textarea-wrapper {
-  width: 100%;
-  color: $text-color;
-  transition: border-color $transition-duration;
-
-  &:hover,
-  &:focus {
-    border-color: rgba(var(--text-color-rgb), 0.8);
-
-    .word-count {
-      color: $text-color;
-    }
-  }
-
-  &:focus {
-    + .word-count {
-      color: $text-color;
-    }
-  }
-}
-
-.textarea-input {
-  height: 300px;
-  resize: none;
-  border-color: rgba(var(--text-color-rgb), 0.4);
-  background-color: transparent;
-  padding: 1rem;
-  border-radius: 0.375rem;
-}
-
-.submit-button {
-  align-self: center;
 }
 </style>
