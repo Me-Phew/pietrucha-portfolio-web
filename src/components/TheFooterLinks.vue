@@ -34,10 +34,10 @@ import {
       <template #icon>
         <PhCode size="32" />
       </template>
-      Made with &nbsp;<PhHeart
+      Wykonane z &nbsp;<PhHeart
         weight="fill"
         color="red"
-      />&nbsp; by MePhew
+      />&nbsp; przez MePhew
     </BaseLink>
     <BaseLink
       :type="LinkTypes.Internal"
@@ -46,7 +46,7 @@ import {
       <template #icon>
         <PhAppWindow size="32" />
       </template>
-      Admin dashboard
+      Panel administracyjny
     </BaseLink>
   </ul>
 </template>
