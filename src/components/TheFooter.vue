@@ -24,7 +24,7 @@ onMounted(() => {
     </div>
 
     <div class="legal">
-      <span>© {{ new Date().getFullYear() }} All rights reserved</span>
+      <span>© {{ new Date().getFullYear() }} Wszelkie prawa zastrzeżone</span>
     </div>
   </footer>
 </template>
