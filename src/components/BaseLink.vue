@@ -84,6 +84,12 @@ validateProps();
     align-items: center;
     gap: inherit;
     cursor: pointer;
+    color: $text-color;
+
+    .link-text {
+      display: flex;
+      align-items: center;
+    }
 
     &:hover .link-text {
       text-decoration: underline;
