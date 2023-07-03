@@ -32,7 +32,7 @@ const currentCharCount = computed(() => message.value.length);
 
   &,
   .textarea-input {
-    width: 100%; 
+    width: 100%;
     color: $text-color;
     transition: border-color $transition-duration;
 
