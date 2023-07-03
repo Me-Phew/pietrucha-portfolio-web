@@ -48,7 +48,7 @@ onMounted(() => {
           </path>
         </svg>
 
-        <span class="text-content">Open gallery</span>
+        <span class="text-content">Galeria zdjęć</span>
       </button>
 
       <div
@@ -77,13 +77,12 @@ onMounted(() => {
       ></div>
 
       <div class="headline-text">
-        <span class="text-content thin">my</span>
-        <span class="text-content bold">photos</span>
+        <span class="text-content thin">moje</span>
+        <span class="text-content bold">zdjęcia</span>
       </div>
     </div>
 
     <BaseModal v-model:open="galleryModalOpen">
-      <template #title>My photos</template>
       <BaseGallery />
     </BaseModal>
   </section>
@@ -121,7 +120,7 @@ onMounted(() => {
       gap: 1rem;
 
       .text-content {
-        font-size: 16rem;
+        font-size: clamp(2rem, 12vw, 16rem);
 
         &.bold {
           font-weight: bolder;
