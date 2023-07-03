@@ -15,7 +15,7 @@ const getFileSize = (numberOfBytes: number | undefined) => {
 const printCreatorMessage = () => {
   const n = [
     `
-  %c Made with \u2665 by MePhew %c https://github.com/Me-Phew`,
+  %c Wykonane z \u2665 przez MePhew %c https://github.com/Me-Phew`,
     'color: #080808; background: #69f24a; padding:5px 0;',
     'color: #fff; background: #1c1c1c; padding:5px 0;',
   ];
