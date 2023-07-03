@@ -13,12 +13,13 @@ const scrollToElement = (element: HTMLElement | null) => {
 </script>
 
 <template>
-  <a
+  <div
+    v-ripple
     class="scroll-link"
     @click="scrollToElement(scrollTarget)"
   >
     <slot></slot>
-  </a>
+  </div>
 </template>
 
 <style scoped lang="scss">
@@ -26,5 +27,7 @@ const scrollToElement = (element: HTMLElement | null) => {
   display: block;
   padding: 0.5rem 1rem;
   cursor: pointer;
+  font-weight: 600;
+  border-radius: 0.5rem;
 }
 </style>
