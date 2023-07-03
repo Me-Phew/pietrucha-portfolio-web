@@ -73,6 +73,8 @@ import InputPassword from '@/components/InputPassword.vue';
     }
 
     .link-back-to-homepage {
+      color: $text-color;
+
       &:hover {
         text-decoration: underline;
       }
