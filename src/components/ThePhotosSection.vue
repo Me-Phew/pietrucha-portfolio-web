@@ -48,7 +48,7 @@ onMounted(() => {
           </path>
         </svg>
 
-        <span class="text-content">Galeria zdjęć</span>
+        <span class="text-content">Otwórz galerię</span>
       </button>
 
       <div
