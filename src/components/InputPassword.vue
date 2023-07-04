@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import BaseInput from '@/components/BaseInput.vue';
 import type { BaseInputProps } from '@/components/BaseInput.vue';
-import { ref, computed } from 'vue';
+import BaseInput from '@/components/BaseInput.vue';
+import IconButton from '@/components/IconButton.vue';
 import { PhEye, PhEyeSlash } from '@phosphor-icons/vue';
+import { computed, ref } from 'vue';
 
 interface InputPasswordProps extends Omit<BaseInputProps, 'type'> {}
 
@@ -32,18 +33,32 @@ const togglePasswordVisibility = () => {
       :type="currentInputType"
       class="password-input"
     />
-    <PhEye
-      size="28"
-      class="icon"
+    <IconButton
+      class="toggle-password-visibilit-button"
       @click="togglePasswordVisibility"
-      v-if="passwordVisible"
-    />
-    <PhEyeSlash
-      size="28"
-      class="icon"
-      @click="togglePasswordVisibility"
-      v-else
-    />
+    >
+      <PhEye
+        size="28"
+        v-if="passwordVisible"
+      />
+      <PhEyeSlash
+        size="28"
+        v-else
+      />
+      <template
+        #tooltip-text
+        v-if="passwordVisible"
+      >
+        <span>Ukryj hasło</span>
+      </template>
+
+      <template
+        #tooltip-text
+        v-else
+      >
+        <span>Pokaż hasło</span>
+      </template>
+    </IconButton>
   </div>
 </template>
 
@@ -56,20 +71,12 @@ const togglePasswordVisibility = () => {
     color: $text-color;
   }
 
-  .icon {
+  .toggle-password-visibilit-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     right: 5%;
-    cursor: pointer;
-    user-select: none;
-    transition: color $transition-duration;
-    color: rgba(var(--text-color-rgb), 0.4);
-
-    &:hover,
-    &:focus {
-      color: $text-color;
-    }
+    background-color: transparent;
   }
 }
 </style>
