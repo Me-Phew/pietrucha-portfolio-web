@@ -35,18 +35,16 @@ onMounted(() => {
       >
         <div class="not-found">
           <p class="huge">404</p>
-          <p class="big">not found</p>
+          <p class="big">nie znaleziono strony</p>
         </div>
-        <p class="info-text">
-          This page (probably) doesn't exist even in the vastness of outer space
-        </p>
+        <p class="info-text">Ta strona (prawdopodobnie) nie istnieje nawet w bezkresie kosmosu</p>
         <BaseLink
           :type="LinkTypes.Internal"
           routeName="home"
         >
           <template #icon><ph-arrow-left :size="32" /></template>
-          Back to homepage</BaseLink
-        >
+          Powrót do strony głównej
+        </BaseLink>
       </div>
     </div>
   </div>
@@ -99,7 +97,7 @@ onMounted(() => {
         }
 
         .big {
-          font-size: 5rem;
+          font-size: 4rem;
           text-transform: uppercase;
         }
       }
