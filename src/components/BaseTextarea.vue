@@ -36,6 +36,10 @@ const currentCharCount = computed(() => message.value.length);
     color: $text-color;
     transition: border-color $transition-duration;
 
+    &::placeholder {
+      color: rgba(var(--text-color-rgb), 0.4);
+    }
+
     &:hover,
     &:focus {
       border-color: rgba(var(--text-color-rgb), 0.8);
