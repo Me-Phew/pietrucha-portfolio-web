@@ -14,7 +14,8 @@ watch(galleryWidth, (newGalleryWidth) => {
   loadGallery(newGalleryWidth);
 });
 
-const loadedObject = import.meta.glob('/photos/*.jpg');
+const loadedObject = import.meta.glob('@/assets/photos/*.jpg');
+
 const images = [...Object.keys(loadedObject)];
 
 const columns = ref<Array<Array<string>>>([]);
