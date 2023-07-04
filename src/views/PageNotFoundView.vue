@@ -1,9 +1,9 @@
 <script setup lang="ts">
+import moon from '@/assets/photos/IMG_0215-2.jpg';
 import BaseLink, { LinkTypes } from '@/components/BaseLink.vue';
 import { PhArrowLeft } from '@phosphor-icons/vue';
 import { gsap } from 'gsap';
 import { onMounted, ref } from 'vue';
-import moon from '/photos/IMG_0215-2.jpg';
 
 const moonPhoto = ref<HTMLElement | null>(null);
 const infoWrapper = ref<HTMLElement | null>(null);
