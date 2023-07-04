@@ -17,7 +17,7 @@ watch(galleryWidth, (newGalleryWidth) => {
 const loadedObject = import.meta.glob('/photos/*.jpg');
 const images = [...Object.keys(loadedObject)];
 
-const columns = ref<Array<Array<String>>>([]);
+const columns = ref<Array<Array<string>>>([]);
 
 const targetImageWidthWithoutGaps = 500;
 
@@ -52,16 +52,16 @@ const loadGallery = (width: number) => {
       <div class="columns-wrapper">
         <div
           class="column"
-          v-for="column in columns"
-          :key="column"
+          v-for="(column, index) in columns"
+          :key="index"
         >
           <div
             class="tile"
-            v-for="image in column"
-            :key="image"
+            v-for="(image, index) in column"
+            :key="index"
           >
             <BaseImage
-              :gallery="gallery"
+              :gallery="gallery!"
               :src="image"
             />
           </div>
