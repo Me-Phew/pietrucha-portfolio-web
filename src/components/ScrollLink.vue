@@ -1,25 +1,20 @@
 <script setup lang="ts">
-interface ScrollLinkProps {
-  scrollTarget: HTMLElement | null;
-}
-
-defineProps<ScrollLinkProps>();
-
-const scrollToElement = (element: HTMLElement | null) => {
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
-  }
-};
+defineProps({
+  scrollTarget: {
+    type: String,
+    required: true,
+  },
+});
 </script>
 
 <template>
-  <div
+  <a
     v-ripple
     class="scroll-link"
-    @click="scrollToElement(scrollTarget)"
+    :href="`#${scrollTarget}`"
   >
     <slot></slot>
-  </div>
+  </a>
 </template>
 
 <style scoped lang="scss">
@@ -29,5 +24,6 @@ const scrollToElement = (element: HTMLElement | null) => {
   cursor: pointer;
   font-weight: 600;
   border-radius: 0.5rem;
+  color: $text-color;
 }
 </style>

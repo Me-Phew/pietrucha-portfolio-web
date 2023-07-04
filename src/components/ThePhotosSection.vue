@@ -1,29 +1,20 @@
 <script setup lang="ts">
 import BaseGallery from '@/components/BaseGallery.vue';
 import BaseModal from '@/components/BaseModal.vue';
-import { useHomePageSectionsStore } from '@/stores/homePageSections';
-import { onMounted, ref } from 'vue';
+import { ref } from 'vue';
 import sunrisePhoto from '/photos/20200516_052227-2.jpg';
 import flowerPhoto from '/photos/20200617_162203-2.jpg';
 import mistySunRays from '/photos/20200714_183506.jpg';
 import dogWithBone from '/photos/Bajzel_sgf-131927.jpg';
 import trolley from '/photos/IMG_0826.jpg';
 
-const homePageSectionsStore = useHomePageSectionsStore();
-
-const photosSection = ref(null);
-
 const galleryModalOpen = ref(false);
-
-onMounted(() => {
-  homePageSectionsStore.photos = photosSection.value;
-});
 </script>
 
 <template>
   <section
     class="photos"
-    ref="photosSection"
+    id="photos"
   >
     <div
       class="showcase"

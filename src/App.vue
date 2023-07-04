@@ -1,8 +1,8 @@
 <script setup lang="ts">
+import { printCreatorMessage } from '@/utils';
 import type { GlobalThemeOverrides } from 'naive-ui';
 import { NConfigProvider, NScrollbar } from 'naive-ui';
 import { RouterView } from 'vue-router';
-import { printCreatorMessage } from '@/utils';
 
 printCreatorMessage();
 
@@ -31,8 +31,12 @@ const themeOverrides: GlobalThemeOverrides = {
 .app-wrapper {
   height: 100vh;
 
-  .n-scrollbar-content {
-    position: relative;
+  .n-scrollbar-container {
+    scroll-behavior: smooth;
+
+    .n-scrollbar-content {
+      position: relative;
+    }
   }
 }
 </style>

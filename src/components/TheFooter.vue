@@ -1,22 +1,12 @@
 <script setup lang="ts">
 import TheContactForm from '@/components/TheContactForm.vue';
 import TheFooterLinks from '@/components/TheFooterLinks.vue';
-import { useHomePageSectionsStore } from '@/stores/homePageSections';
-import { onMounted, ref } from 'vue';
-
-const homePageSectionsStore = useHomePageSectionsStore();
-
-const footerSection = ref(null);
-
-onMounted(() => {
-  homePageSectionsStore.footer = footerSection.value;
-});
 </script>
 
 <template>
   <footer
-    ref="footerSection"
     class="homepage-footer"
+    id="footer"
   >
     <div class="contact">
       <TheContactForm />

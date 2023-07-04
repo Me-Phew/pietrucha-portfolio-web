@@ -1,21 +1,18 @@
 <script setup lang="ts">
 import ScrollLink from '@/components/ScrollLink.vue';
-import { useHomePageSectionsStore } from '@/stores/homePageSections';
-
-const homePageSectionsStore = useHomePageSectionsStore();
 </script>
 
 <template>
   <ul class="scroll-links">
     <li class="scroll-link-item">
-      <ScrollLink :scrollTarget="homePageSectionsStore.photos">Zdjęcia</ScrollLink>
+      <ScrollLink scrollTarget="photos">Zdjęcia</ScrollLink>
     </li>
     <li class="scroll-link-item">
-      <ScrollLink :scrollTarget="homePageSectionsStore.photoShoots">Sesje zdjęciowe</ScrollLink>
+      <ScrollLink scrollTarget="photo-shoots">Sesje zdjęciowe</ScrollLink>
     </li>
     <li class="scroll-link-item">
       <ScrollLink
-        :scrollTarget="homePageSectionsStore.footer"
+        scrollTarget="footer"
         class="cta-link"
         >Kontakt</ScrollLink
       >
