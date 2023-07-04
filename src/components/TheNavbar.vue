@@ -35,7 +35,6 @@ onMounted(() => {
   padding: 1rem 10vw;
   display: flex;
   justify-content: space-between;
-  text-transform: uppercase;
   font-size: 1rem;
   transform: translateY(-100%);
 

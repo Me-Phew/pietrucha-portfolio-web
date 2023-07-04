@@ -29,6 +29,7 @@ const homePageSectionsStore = useHomePageSectionsStore();
   display: flex;
   gap: 5rem;
   align-items: center;
+  text-transform: uppercase;
 
   .cta-link {
     background-color: $text-color;
