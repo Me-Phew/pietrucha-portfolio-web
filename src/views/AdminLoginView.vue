@@ -1,7 +1,7 @@
 <template>
   <div class="login-page">
     <div class="login-form-wrapper">
-      <p class="title">Admin dashboard login</p>
+      <p class="title">Panel administracyjny</p>
       <form
         @submit.prevent
         class="login-form"
@@ -9,23 +9,23 @@
         <BaseInput
           idAndName="username"
           autocomplete="username"
-          placeholder="Username"
+          placeholder="Nazwa użytkownika"
         />
         <InputPassword
           idAndName="currentPassword"
           autocomplete="current-password"
-          placeholder="Password"
+          placeholder="Hasło"
         />
         <BaseButton
           type="submit"
           class="login-button"
-          >Login</BaseButton
+          >Zaloguj się</BaseButton
         >
       </form>
       <router-link
         :to="{ name: 'home' }"
         class="link-back-to-homepage"
-        >Back to homepage</router-link
+        >Powrót do strony głównej</router-link
       >
     </div>
   </div>
@@ -57,9 +57,10 @@ import InputPassword from '@/components/InputPassword.vue';
     border-radius: 0.375rem;
     box-shadow: 0 0 8px -2px rgba(var(--text-color-rgb), 0.1);
     gap: 2rem;
+    max-width: 400px;
 
     .title {
-      font-size: 1.6rem;
+      font-size: clamp(1.4rem, 5vw, 1.6rem);
       font-weight: 600;
     }
 
