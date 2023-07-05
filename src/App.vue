@@ -38,5 +38,9 @@ const themeOverrides: GlobalThemeOverrides = {
       position: relative;
     }
   }
+
+  .n-scrollbar-rail__scrollbar {
+    z-index: 10000;
+  }
 }
 </style>
