@@ -2,6 +2,44 @@
 @import 'constants';
 @import 'vars';
 
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(var(--secondary-color-rgb), 0.4) transparent;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(var(--secondary-color-rgb), 0.4);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(var(--secondary-color-rgb), 1);
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: rgba(var(--secondary-color-rgb), 1);
+}
+
 *,
 *::before,
 *::after {
@@ -12,6 +50,10 @@
   transition: transform $transition-duration, background-color $transition-duration,
     box-shadow $transition-duration;
   font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

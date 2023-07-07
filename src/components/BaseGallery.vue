@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import BaseImage from '@/components/BaseImage.vue';
 import { useElementSize } from '@vueuse/core';
-import { NScrollbar } from 'naive-ui';
 import { watch } from 'vue';
 
 import { ref } from 'vue';
@@ -49,42 +48,33 @@ const loadGallery = (width: number) => {
     class="gallery"
     ref="gallery"
   >
-    <n-scrollbar trigger="none">
-      <div class="columns-wrapper">
+    <div class="columns-wrapper">
+      <div
+        class="column"
+        v-for="(column, index) in columns"
+        :key="index"
+      >
         <div
-          class="column"
-          v-for="(column, index) in columns"
+          class="tile"
+          v-for="(image, index) in column"
           :key="index"
         >
-          <div
-            class="tile"
-            v-for="(image, index) in column"
-            :key="index"
-          >
-            <BaseImage
-              :gallery="gallery!"
-              :src="image"
-            />
-          </div>
+          <BaseImage
+            :gallery="gallery!"
+            :src="image"
+          />
         </div>
       </div>
-    </n-scrollbar>
+    </div>
   </div>
 </template>
-
-<style lang="scss">
-.gallery {
-  .n-scrollbar-container {
-    padding: 0 1rem 1rem 1rem;
-  }
-}
-</style>
 
 <style scoped lang="scss">
 .gallery {
   width: 80vw;
   height: calc(88vh - 1rem);
   overflow-y: auto;
+  padding: 0 1rem 0 1rem;
 
   .columns-wrapper {
     width: 100%;
