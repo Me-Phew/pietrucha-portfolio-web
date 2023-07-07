@@ -9,7 +9,6 @@ import {
   watchThrottled,
 } from '@vueuse/core';
 import { useFocusTrap } from '@vueuse/integrations/useFocusTrap';
-import { NScrollbar } from 'naive-ui';
 import { computed, nextTick, ref, watch } from 'vue';
 
 const props = defineProps({
@@ -38,6 +37,11 @@ const modal = ref<HTMLElement | null>(null);
 const { activate: activateModalFocus, deactivate: deactivateModalFocus } = useFocusTrap(modal, {
   escapeDeactivates: false,
 });
+
+import { useScrollLock } from '@vueuse/core';
+
+const body = ref<HTMLElement | null>(document.body);
+const isBodyScrollLocked = useScrollLock(body);
 
 const shake = ref(false);
 const closing = ref(false);
@@ -107,6 +111,7 @@ const closeModal = () => {
   exitFullscreen();
 
   if (!closing.value) {
+    isBodyScrollLocked.value = false;
     deactivateModalFocus();
     closing.value = true;
     emit('update:open', false);
@@ -154,6 +159,7 @@ const handleModalClose = () => {
 
 const openModal = async () => {
   modalOpen.value = true;
+  isBodyScrollLocked.value = true;
 
   await nextTick();
   activateModalFocus();
@@ -318,9 +324,7 @@ const expandBtnText = computed(() => {
               </IconButton>
             </div>
             <div class="body">
-              <n-scrollbar trigger="none">
-                <slot />
-              </n-scrollbar>
+              <slot />
             </div>
           </template>
         </div>
@@ -330,14 +334,6 @@ const expandBtnText = computed(() => {
 </template>
 
 <style lang="scss">
-.body {
-  .n-scrollbar-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
 .fullscreen .modal-content .body.fullscreen-enabled {
   * {
     border-radius: 0;
